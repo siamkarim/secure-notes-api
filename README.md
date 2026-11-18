@@ -1,5 +1,7 @@
 # Secure Notes API
 
+[![CI](https://github.com/siamkarim/secure-notes-api/actions/workflows/ci.yml/badge.svg)](https://github.com/siamkarim/secure-notes-api/actions/workflows/ci.yml)
+
 REST API for a note-taking app with JWT authentication and role-based access control.
 
 - **Stack:** Node.js, Express 5, TypeScript, MongoDB with Mongoose, JWT, argon2id
@@ -90,6 +92,8 @@ All paths start with `/api`. Errors always look like `{ "error": { "code", "mess
 | GET | `/healthz` | public | Outside `/api` |
 
 Send the access token as `Authorization: Bearer <token>`.
+
+**Postman:** import [`postman/secure-notes.postman_collection.json`](postman/secure-notes.postman_collection.json), set the `email` and `password` variables, and run **Auth > Login**. The token is stored and used by all other requests.
 
 ## Pagination
 
