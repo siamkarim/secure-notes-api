@@ -6,7 +6,7 @@ const postSchema = new Schema(
     title: { type: String, required: true, trim: true, maxlength: 200 },
     body: { type: String, required: true, maxlength: 10_000 },
   },
-  { timestamps: true },
+  { timestamps: true, versionKey: false },
 );
 
 // Supports the $lookup from users into posts (join on author), with the

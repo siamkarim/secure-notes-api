@@ -6,7 +6,7 @@ const noteSchema = new Schema(
     title: { type: String, required: true, trim: true, maxlength: 200 },
     body: { type: String, default: '', maxlength: 10_000 },
   },
-  { timestamps: true },
+  { timestamps: true, versionKey: false },
 );
 
 // "List my notes, newest first": equality on owner, then sort/range on _id.

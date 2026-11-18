@@ -14,7 +14,7 @@ const userSchema = new Schema(
     // Bumped on logout / password change / role change to revoke issued tokens.
     tokenVersion: { type: Number, default: 0 },
   },
-  { timestamps: true },
+  { timestamps: true, versionKey: false },
 );
 
 // Login looks users up by email, and emails must be unique.
