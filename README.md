@@ -4,8 +4,8 @@ REST API for a note-taking app with JWT authentication and role-based access con
 
 - **Stack:** Node.js, Express 5, TypeScript, MongoDB with Mongoose, JWT, argon2id
 - **Frontend repo:** https://github.com/siamkarim/secure-notes-web
-- **Live API:** _add the Render URL here_
-- **Live frontend:** _add the Vercel URL here_
+- **Live API:** https://secure-notes-api-c5fh.onrender.com
+- **Live frontend:** https://secure-notes-web-three.vercel.app
 
 ## Contents
 
@@ -276,7 +276,7 @@ The frontend host proxies `/api/*` to this API, so the browser talks to a single
 | Start command | `npm start` |
 | Health check path | `/healthz` |
 
-Environment variables: `NODE_ENV=production`, `MONGODB_URI`, `JWT_ACCESS_SECRET`, `JWT_REFRESH_SECRET`, `CORS_ORIGINS` (the Vercel URL), `TRUST_PROXY=1`.
+Environment variables: `NODE_ENV=production`, `MONGODB_URI`, `JWT_ACCESS_SECRET`, `JWT_REFRESH_SECRET`, `CORS_ORIGINS` (the Vercel URL), `TRUST_PROXY=3`.
 
 Create the admin once from your machine, pointing at Atlas:
 
