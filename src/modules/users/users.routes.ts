@@ -31,7 +31,7 @@ const updateMeBody = z
     path: ['currentPassword'],
   });
 
-const byInterestQuery = z.object({
+const byInterestQuery = z.strictObject({
   limit,
   cursor: interest.optional(), // last interest name of the previous page
   interest: interest.optional(), // show only this interest

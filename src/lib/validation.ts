@@ -11,8 +11,8 @@ export const idParams = z.object({ id: objectId });
 
 export const limit = z.coerce.number().int().min(1).max(100).default(20);
 
-/** Query string for every list endpoint paged by _id. */
-export const pageQuery = z.object({ limit, cursor: objectId.optional() });
+/** Query string for every list endpoint paged by _id. Unknown parameters are rejected. */
+export const pageQuery = z.strictObject({ limit, cursor: objectId.optional() });
 
 export const name = z.string().trim().min(1).max(100);
 export const email = z.string().trim().toLowerCase().max(254).pipe(z.email());
